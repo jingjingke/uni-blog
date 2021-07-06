@@ -14,4 +14,12 @@
 
 <style>
 	/*每个页面公共css */
+	body {
+		background: #f2f2f2;
+	}
+	/* 页面中的一个模块间距 */
+	.modular {
+		margin: 12px 12px 0;
+		border-radius: 5px;
+	}
 </style>

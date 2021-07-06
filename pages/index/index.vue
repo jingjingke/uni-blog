@@ -1,9 +1,13 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+	<view>
+		<swiper class="swiper-wrap modular" :interval='10000' :autoplay='true'>
+			<swiper-item v-for='(item,index) in swiperList' :key='index'>
+				<view class="swiper-item">
+					<image class="swiper-image modular" :src="item.litpic"></image>
+					<text class="swiper-text">{{item.title}}</text>
+				</view>
+			</swiper-item>
+		</swiper>
 	</view>
 </template>
 
@@ -11,42 +15,52 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				swiperList: []
 			}
 		},
 		onLoad() {
-
+			this.querySwiperList();
 		},
 		methods: {
-
+			querySwiperList() {
+				uni.request({
+					url: 'http://jingjingke.com/api/list.php',
+					data: {
+						typeid: 2,
+						flag: true
+					},
+					success: (res) => {
+						this.swiperList = (res.data || []).map(item => {
+							return {
+								litpic: 'http://www.jingjingke.com' + item.litpic,
+								title: item.title
+							}
+						})
+					}
+				});
+			}
 		}
 	}
 </script>
-
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+	.swiper-wrap {
+		height: 300px;
+		background: #fff;
 	}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
+	.swiper-image {
+		display: block;
+		width: auto;
 	}
 
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+	.swiper-text {
+		display: block;
+		height: 3em;
+		line-height: 3em;
+		margin: 0 20px;
+		text-align: center;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 </style>

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 437611 */
+  src: url('~@/static/iconfont/iconfont.eot?t=1626423405952'); /* IE9 */
+  src: url('~@/static/iconfont/iconfont.eot?t=1626423405952#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('~@/static/iconfont/iconfont.woff2?t=1626423405952') format('woff2'),
+       url('~@/static/iconfont/iconfont.woff?t=1626423405952') format('woff'),
+       url('~@/static/iconfont/iconfont.ttf?t=1626423405952') format('truetype'),
+       url('~@/static/iconfont/iconfont.svg?t=1626423405952#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-picture:before {
+  content: "\e105";
+}
+
+.icon-back:before {
+  content: "\e300";
+}
+
+.icon-kinds:before {
+  content: "\e202";
+}
+
+.icon-home:before {
+  content: "\e201";
+}
+
+.icon-me:before {
+  content: "\e203";
+}
+
+.icon-share:before {
+  content: "\e103";
+}
+
+.icon-note:before {
+  content: "\e102";
+}
+
+.icon-life:before {
+  content: "\e104";
+}
+
+.icon-calendar:before {
+  content: "\e101";
+}
+
+.icon-delay:before {
+  content: "\e100";
+}
+

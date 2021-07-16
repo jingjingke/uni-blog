@@ -8,6 +8,20 @@
 				</view>
 			</swiper-item>
 		</swiper>
+		<view class="sort-wrap modular">
+			<view class="sort-entry">
+				<view class="iconfont icon-note" />
+				<text>前端笔记</text>
+			</view>
+			<view class="sort-entry">
+				<view class="iconfont icon-share" />
+				<text>转载分享</text>
+			</view>
+			<view class="sort-entry">
+				<view class="iconfont icon-life" />
+				<text>生活锁事</text>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -62,5 +76,25 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+
+	.sort-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	.sort-entry {
+		background: #fff;
+		border-radius: 3px;
+		width: 33%;
+		text-align: center;
+		padding: 24px 0 12px;
+	}
+	.sort-entry:nth-child(2) {
+		margin: 0 12px;
+	}
+	.sort-entry .iconfont{
+		font-size: 24px;
+		padding-bottom: 12px;
+		color: #0aba07;
 	}
 </style>

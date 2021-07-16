@@ -14,6 +14,8 @@
 
 <style>
 	/*每个页面公共css */
+	/* 字体图标 */
+	@import url("./static/iconfont/iconfont.css");
 	body {
 		background: #f2f2f2;
 	}

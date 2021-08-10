@@ -19,6 +19,9 @@
 	body {
 		background: #f2f2f2;
 	}
+	uni-page-body {
+		height: 100%;
+	}
 	/* 页面中的一个模块间距 */
 	.modular {
 		margin: 12px 12px 0;
